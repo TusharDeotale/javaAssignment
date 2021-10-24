@@ -6,25 +6,20 @@ class Shape {
 	public void setDim(int dim1, int dim2) {
 		this.dim1 = dim1;
 		this.dim2 = dim2;
-		System.out.println(dim1);
-		System.out.println(dim2);
 	}
-
 }
 
 class Circle extends Shape {
 
-	int areaOfCircle() {
-
-		return (22 / 7) * dim1 * dim1;
-
+	float areaOfCircle() {
+		return (22 / (float)7) * dim1 * dim1;
 	}
-
 }
 
 class Rectangle extends Circle {
-	int areaOfRectangle() {
-		return dim1 * dim2;
+	
+	float areaOfRectangle() {
+		return (float) dim1 * dim2;
 	}
 }
 
@@ -41,3 +36,4 @@ public class Q4_ShapeCircleRectangle {
 	}
 
 }
+
