@@ -35,7 +35,7 @@ public class Q7_CheckMarks {
 
 		try {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter the internals");
+			System.out.println("Enter the internal marks");
 			int n = sc.nextInt();
 			check_internal(n);
 			sc.close();
@@ -45,7 +45,7 @@ public class Q7_CheckMarks {
 
 		try {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter the internals");
+			System.out.println("Enter the external marks");
 			int n = sc.nextInt();
 			check_external(n);
 			sc.close();
