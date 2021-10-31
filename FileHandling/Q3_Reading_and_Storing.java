@@ -41,7 +41,7 @@ public class Q3_Reading_and_Storing {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		sc.close();
+		sc.close(); 
 	}
 
 }
