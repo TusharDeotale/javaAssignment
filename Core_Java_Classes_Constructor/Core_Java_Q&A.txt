@@ -1,0 +1,95 @@
+Q 2 . Can we have a class with no Constructor in it?
+Ans: -
+	It is possible for a class to have no constructor. (An important distinction to draw here is that the JVM does not require all class files to have a constructor; however, any class defined in Java does have a default constructor if a constructor is not explicitly declared 
+
+Q 3 Can we declare class constructor as private?
+Ans: -
+	Yes, we can declare a constructor as private.
+
+Q 4 Difference between constructor and function 
+Ans: -
+	Constructor: -
+		>Constructors are similar to methods, but they are used to initialize an object.
+		>Constructors do not have any return type(not even void).
+		>Every time we create an object by using the new() keyword, a constructor is called.
+		>If we do not create a constructor by ourself, then the default constructor(created by Java compiler) is called.
+
+	Function: -
+		>Function is a group of statements that can be called at any point in the program using its name to perform a specific task.
+		>Function should have a different name than class name.
+		>Function requires a valid return type
+
+Q 5 Can we have both Default Constructor and Parameterized Constructor in the same class? 
+Ans: -
+	YES,we can have both Default Constructor and Parameterized Constructor in the same class.
+
+
+Q7 What is the output ? 
+public class StaticDemo { 
+	int num1 = 6; 
+	static int num2 = 10; 
+		public static void main(String args[]) { 
+			StaticDemo s1 = new StaticDemo(); 
+			StaticDemo s2 = new StaticDemo(); 
+			s1.num1 = 15; 
+			s1.num2 = 17; 
+			s2.num1 = 22; 
+			s2.num2 = 28; 
+			System.out.println(s1.num1 + " " + s1.num2 + " " + s2.num1 + " "+ s2.num2); 
+	} 
+} 
+A. 15 17 22 28 
+B. 15 17 22 17 
+C. 15 28 22 28 
+D. 22 17 22 28 
+E. 22 28 22 28 
+F. compile time error
+
+Ans: - (C) 15 28 22 28
+
+Q 8 What is static keyword in Java?
+Ans: -
+	Static is a Non-Access Modifier. Static can be applied to variable, method, nested class and initialization blocks (static block).
+
+Q 9 What is a static variable?
+Ans: -
+	A Static variable gets memory allocated only once during the time of class loading. 
+	All the instance of the class share the same copy of the variable, a static variable can be accessed directly by calling “<<ClassName>>.<<VariableName>>” without need to create an instance for the class. 
+	value of a static variable will be common for all instances.
+
+Q 10 What is a static method?
+Ans: -
+	A static method belongs to the class rather than an object. It can be called directly by using the class name “<<ClassName>>.<<MethodName>>” 
+	A static method can access static variables directly and it cannot access non-static variables and can only call a static method directly and it cannot call a non-static method from it. 
+	Only the main() method which is static will be called by the JVM automatically, Not all the static method will be called automatically.
+
+Q 11 Can a static block exist without a main() method?
+Ans: -
+	No. You cannot have a static block alone in the class without a main method. 
+This behavior was a valid one in Java 6.
+
+Q 12 Why main() method is declared as static?
+Ans: -
+	If our main() method is not declared as static then the JVM has to create an object first and call, which causes the problem of having extra memory allocation.
+
+Q 13 What is a static block?
+Ans: -
+	A static block is a block of code inside a Java class that will be executed when a class is first loaded into the JVM. Mostly the static block will be used for initializing the variables. 
+	The static block will be called only one while loading and it cannot have any return type, or any keywords (this or super).
+
+class test 
+{ 
+	static int val; 
+static 
+{ 
+val = 100; 
+} 
+}
+
+Q 14 Can we have multiple static blocks in our code?
+Ans: -
+	Yes, we can have more than one static block in our code. It will be executed in the same order it is written.
+
+Q 15 Can constructors be static in Java?
+Ans: -
+No.
