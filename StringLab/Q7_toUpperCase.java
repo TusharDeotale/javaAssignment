@@ -10,7 +10,7 @@ public class Q7_2reverse {
 		StringBuffer output = new StringBuffer();
 		String input = "welcome to java";
 		String[] str = input.split("\s");
-		for (int i = str.length - 1; i >= 0; i--) {
+		for (int i = 0; i < str.length; i++) {
 			str[i] = str[i].substring(0, 1).toUpperCase() + str[i].substring(1);
 			output.append(str[i] + " ");
 		}
